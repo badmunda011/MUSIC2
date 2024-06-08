@@ -100,7 +100,7 @@ async def chk_usr(_, message: Message):
         )
 
 
-@app.on_message(filters.group & filters.command("sg") & ~filters.bot & ~filters.via_bot)
+@app.on_message(filters.group & filters.command("sgg") & ~filters.bot & ~filters.via_bot)
 async def set_mataa(_, message: Message):
     if len(message.command) == 1:
         return await message.reply("**ᴅᴇᴛᴇᴄᴛ  ᴜsᴇʀs ᴜsᴀɢᴇ : sɢ ᴏɴ ᴏɴ|ᴏғ**")
