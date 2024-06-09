@@ -46,7 +46,7 @@ def gen(first_6: int, mm: int = None, yy: int = None, cvv: int = None):
     return f"{cc}|{mm}|{yy}|{cvv}"
 
 
-@app.on_message(filters.command(["cc"]))
+@app.on_message(filters.command(["gen"]))
 async def generate_card(client, message):
     try:
         text = message.text.split()[1:]  # Extract arguments after the command
