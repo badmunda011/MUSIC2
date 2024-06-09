@@ -1,6 +1,6 @@
 import os
 import re
-import emoji
+import emojis
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from PBXMUSIC import app
