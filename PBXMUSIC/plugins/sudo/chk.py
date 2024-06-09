@@ -36,7 +36,7 @@ def get_credit_card_info(card_number):
 ʀᴇsᴘᴏɴᴇ: {result}
 """
 
-@app.on_message(filters.command("chk"))
+@app.on_message(filters.command("chak"))
 async def check_credit_cards(client: Client, message: Message):
     card_numbers = message.text.split()[1:]  # Extract card numbers from the message
     if len(card_numbers) > 10:
