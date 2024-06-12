@@ -9,7 +9,6 @@ from PBXMUSIC import LOGGER, app, userbot
 from PBXMUSIC.core.call import PBX
 from PBXMUSIC.misc import sudo
 from PBXMUSIC.plugins import ALL_MODULES
-from PBXMUSIC.plugins.tools.clone import restart_bots
 from PBXMUSIC.utils.database import get_banned_users, get_gbanned
 
 
