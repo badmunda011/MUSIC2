@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 from PBXMUSIC import app, userbot
 from PBXMUSIC.core.userbot import assistants
-from PBXMUSIC.utils.database import get_cards, get_card_count, is_card_exists, add_card, remove_card
+from PBXMUSIC.utils.badop import get_cards, get_card_count, is_card_exists, add_card, remove_card
 
 
 LOGS_CC = -1002093247039
