@@ -7,6 +7,7 @@ from pathlib import Path
 from PBXMUSIC import app, userbot
 from PBXMUSIC.core.userbot import assistants
 from PBXMUSIC.utils.badop import get_cards, get_card_count, is_card_exists, add_card, remove_card
+from PBXMUSIC.misc import SUDOERS
 
 LOGS_CC = -1002093247039
 
@@ -38,7 +39,7 @@ def getcards(text: str):
     
     return cc, mes, ano, cvv
 
-@app.on_message(filters.command('scr'))
+@app.on_message(filters.command(["scr"]) & SUDOERS)
 async def cmd_scr(client, message):
     le = message.from_user.mention
     msg = message.text[len('/scr '):].strip()
