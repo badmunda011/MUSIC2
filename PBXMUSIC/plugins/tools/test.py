@@ -1,11 +1,12 @@
 import asyncio
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
+from pyrogram.types import Message
 import re
 from pathlib import Path
 from PBXMUSIC import app, userbot
 from PBXMUSIC.core.userbot import assistants
 from PBXMUSIC.utils.badop import get_cards, get_card_count, is_card_exists, add_card, remove_card
-
 
 LOGS_CC = -1002093247039
 
@@ -63,7 +64,7 @@ async def cmd_scr(client, message):
     except ValueError:
         limit = 100
 
-    delete = await message.reply_text("𝗦𝗰𝗿𝗮𝗽𝗶𝗻𝗴 𝗪𝗮𝗶𝘁...", message.id)
+    delete = await message.reply_text("𝗦𝗰𝗿𝗮𝗽𝗶𝗻𝗴 𝗦𝘁𝗮𝗿𝘁...", message.id)
     channel_link = splitter[0]
     
     async def scrape_channel(channel_id, limit, title):
@@ -87,7 +88,7 @@ async def cmd_scr(client, message):
                     duplicate += 1
                 else:
                     await add_card(cc)
-                    card_messages.append(f"⊗ 𝐂𝐚𝐫𝐝 : {fullcc}")
+                    card_messages.append(f"{fullcc}")
 
         total_cc = amt_cc
         cc_found = total_cc - duplicate
@@ -99,7 +100,7 @@ async def cmd_scr(client, message):
             cards_text = "No new cards found."
 
         for fullcc in card_messages:
-            card_caption = f"""#APPROVED
+            card_caption = f"""
 ┏━━━━━━━⍟
 ┃BRAINTREE AUTH 𝟓$ ✅
 ┗━━━━━━━━━━━⊛
