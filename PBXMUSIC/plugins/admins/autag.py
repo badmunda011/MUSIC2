@@ -8,7 +8,7 @@ from PBXMUSIC.utils.database import get_assistant
 SPAM_CHATS = []
 
 
-@app.on_message(filters.command(["utag"], prefixes=["/", "."]) & admin_filter)
+@app.on_message(filters.command(["putag"], prefixes=["/", "."]) & admin_filter)
 async def tag_all_useres(_, message):
     userbot = await get_assistant(message.chat.id)
     if message.chat.id in SPAM_CHATS:
@@ -18,7 +18,7 @@ async def tag_all_useres(_, message):
     replied = message.reply_to_message
     if len(message.command) < 2 and not replied:
         await message.reply_text(
-            "** ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ, ʟɪᴋᴇ »** `/utag  Hi Friends`"
+            "** ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ, ʟɪᴋᴇ »** `/putag  Hi Friends`"
         )
         return
     if replied:
@@ -56,7 +56,7 @@ async def tag_all_useres(_, message):
             if usernum == 5:
                 await userbot.send_message(
                     message.chat.id,
-                    f"{text}\n{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /utagcancel ||",
+                    f"{text}\n{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /putagcancel ||",
                     ParseMode.HTML,
                 )
                 await asyncio.sleep(2)
@@ -71,7 +71,7 @@ async def tag_all_useres(_, message):
 @app.on_message(
     filters.command(
         [
-            "utagcancel",
+            "putagcancel",
         ],
         prefixes=["/", "."],
     )
