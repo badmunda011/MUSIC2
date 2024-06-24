@@ -23,7 +23,7 @@ from PBXMUSIC.utils.database import (
 from PBXMUSIC.utils.decorators.language import language
 from PBXMUSIC.utils.pastebin import PBXBin
 
-@app.on_message(filters.command(["musicrestart"]) & SUDOERS)
+@app.on_message(filters.command("mrestart"))
 async def restart_(_, message):
     response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
     ac_chats = await get_active_chats()
