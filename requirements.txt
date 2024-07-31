@@ -20,7 +20,7 @@ heroku3
 apscheduler
 opencv-python-headless==4.9.0.80
 motor==3.3.2
-pillow==9.5.0
+pillow==10.4.0
 psutil
 wget
 pyfiglet
