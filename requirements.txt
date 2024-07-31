@@ -40,7 +40,7 @@ speedtest-cli
 spotipy
 tgcrypto
 opencv-python-headless==4.9.0.80
-telethon==1.33.1
+telethon==1.36.0
 telegraph==2.2.0
 unidecode
 yt-dlp
