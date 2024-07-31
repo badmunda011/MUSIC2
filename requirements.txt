@@ -18,7 +18,7 @@ pydub
 pycountry
 heroku3
 apscheduler
-opencv-python-headless==4.9.0.80
+opencv-python-headless==4.10.0.84
 motor==3.3.2
 pillow==9.5.0
 psutil
@@ -39,7 +39,7 @@ emojis
 speedtest-cli
 spotipy
 tgcrypto
-opencv-python-headless==4.9.0.80
+opencv-python-headless==4.10.0.84
 telethon==1.33.1
 telegraph==2.2.0
 unidecode
