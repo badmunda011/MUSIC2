@@ -50,7 +50,7 @@ gtts
 git+https://github.com/badmunda98/SafoneAPI
 #git+https://github.com/joetats/youtube_search@master
 #git+https://github.com/alexmercerind/youtube-search-python@main
-lexica-api==1.4.7
+lexica-api==1.5.9
 httpx==0.25.2
 gpytranslate
 openai==0.28.0
